@@ -10,7 +10,8 @@ import { ACompComponent } from './a-comp/a-comp.component';
 import { BCompComponent } from './b-comp/b-comp.component';
 
 import {RouterModule} from '@angular/router';
-import { NotFoundComponent } from './not-found/not-found.component'
+import { NotFoundComponent } from './not-found/not-found.component';
+import { GameComponent } from './game/game.component'
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NotFoundComponent } from './not-found/not-found.component'
     
     ACompComponent,
     BCompComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    GameComponent
   ],
   imports: [
     
@@ -27,7 +29,8 @@ import { NotFoundComponent } from './not-found/not-found.component'
     AppRoutingModule,
     FormsModule,
     RouterModule.forRoot([
-      {path: 'a', component: ACompComponent},
+      {path: 'games/:category', component: ACompComponent},
+      {path: 'game/:id', component: GameComponent},
       {path: 'country/:name', component: BCompComponent},
       {path: '**', component: NotFoundComponent}
     ])
