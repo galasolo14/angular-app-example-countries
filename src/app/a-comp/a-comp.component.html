@@ -1,10 +1,69 @@
-<p>a-comp works!</p>
+<p>Games</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Category</th>
+            <th>Game ID</th>
+            <th>Score A</th>
+            <th>Score B</th>
+            <th>Team A</th>
+            <th>Team B</th>
+            <th>Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- <tr ng-repeat="x in data">
+            <td>{{x.category}}</td>
+            <td>{{x.id}}</td>
+            <td>{{x.score_a}}</td>
+            <td>{{x.score_b}}</td>
+            <td>{{x.team_a}}</td>
+            <td>{{x.team_b}}</td>
+            <td>{{x.time}}</td>
+        </tr> -->
+        <tr >
+            <td>{{data[0].category}}</td>
+            <td>{{data[0].id}}</td>
+            <td>{{data[0].score_a}}</td>
+            <td>{{data[0].score_b}}</td>
+            <td>{{data[0].team_a}}</td>
+            <td>{{data[0].team_b}}</td>
+            <td>{{data[0].time}}</td>
+            <button (click)="goToPage(data[0].id)"> Go To Game </button>
+        </tr>
+        <tr >
+            <td>{{data[1].category}}</td>
+            <td>{{data[1].id}}</td>
+            <td>{{data[1].score_a}}</td>
+            <td>{{data[1].score_b}}</td>
+            <td>{{data[1].team_a}}</td>
+            <td>{{data[1].team_b}}</td>
+            <td>{{data[1].time}}</td>
+            <button (click)="goToPage(data[1].id)"> Go To Game </button>
+        </tr>
+        <tr >
+            <td>{{data[2].category}}</td>
+            <td>{{data[2].id}}</td>
+            <td>{{data[2].score_a}}</td>
+            <td>{{data[2].score_b}}</td>
+            <td>{{data[2].team_a}}</td>
+            <td>{{data[2].team_b}}</td>
+            <td>{{data[2].time}}</td>
+            <button (click)="goToPage(data[2].id)"> Go To Game </button>
+        </tr>
+
+    </tbody>
 
 
 
-<div>
+</table>
+
+
+
+<!-- <div>
     <button (click)="goToPage()">Go To Page</button>
-</div>
+</div> -->
 
 <div>
     <a [routerLink]="['/b']"  [queryParams]="{a:'b'}" >Go To Page </a>
